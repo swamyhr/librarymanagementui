@@ -3,7 +3,7 @@ const registerInputFields = [
         name: "name",
         label: "Name",
         type: "text",
-        id: "register_name",
+        id: "register_user_name",
         pattern: ""
     },
     {

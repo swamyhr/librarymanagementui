@@ -19,6 +19,10 @@ export const router = createBrowserRouter([
             {
                 path: "register",
                 element: <Register />
+            },
+            {
+                path: "/addBook",
+                element: <AddBook />
             }
         ]
     },
@@ -37,9 +41,5 @@ export const router = createBrowserRouter([
 
         ]
     },
-    {
-        path: "/addBook",
-        element: <AddBook />
-    }
 ])
 

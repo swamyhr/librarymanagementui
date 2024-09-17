@@ -4,6 +4,7 @@ import { bookInputFields } from '../utils/BookInputFields'
 import InputField from './InputField'
 import Button from './Button'
 import { saveNewBook } from '../services/BookService'
+import { ADD_BOOK_FORM_TITLE } from '../utils/constants'
 
 const AddBook = () => {
 
@@ -49,14 +50,14 @@ const AddBook = () => {
     }
 
     return (
-        <div>
-
+        <React.Fragment>
+            <h2>{ADD_BOOK_FORM_TITLE}</h2>
             {bookInputFields.map((inputField) => (<InputField key={inputField.id} {...inputField}
                 onChange={onChange} />))}
 
             <Button type='submit' button_name={'Add'}
                 onSubmit={onSubmit} />
-        </div>
+        </React.Fragment>
     )
 }
 

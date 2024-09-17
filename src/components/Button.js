@@ -1,4 +1,5 @@
 import React from 'react'
+import "../assets/stylesheets/Button.css"
 
 const Button = ({ button_name, type = 'button', onSubmit }) => {
 
@@ -7,7 +8,7 @@ const Button = ({ button_name, type = 'button', onSubmit }) => {
 
     return (
         <>
-            <button onClick={onSubmit} type={type}>
+            <button className='btn' onClick={onSubmit} type={type}>
                 {button_name}
             </button>
         </>
