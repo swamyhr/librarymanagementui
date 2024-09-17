@@ -4,7 +4,7 @@ export const registerUser = (userDetails) => {
 
     console.log("register called ");
 
-    return fetch(`${baseUrl}/api/users/`, {
+    return fetch(`${baseUrl}/users/`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
