@@ -5,6 +5,7 @@ import Register from "../components/Register";
 import DashBoard from "../components/DashBoard";
 import Book from "../components/Book";
 import BooksList from "../components/BooksList";
+import AddBook from "../components/AddBook";
 
 export const router = createBrowserRouter([
     {
@@ -18,6 +19,10 @@ export const router = createBrowserRouter([
             {
                 path: "register",
                 element: <Register />
+            },
+            {
+                path: "/addBook",
+                element: <AddBook />
             }
         ]
     },
@@ -35,6 +40,6 @@ export const router = createBrowserRouter([
             }
 
         ]
-    }
+    },
 ])
 
