@@ -13,3 +13,16 @@ export const registerUser = (userDetails) => {
     })
 }
 
+export const login = (userDetails) => {
+
+    console.log("User details for login ", userDetails);
+
+    return fetch(`${baseUrl}/users/`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(userDetails)
+    })
+
+}

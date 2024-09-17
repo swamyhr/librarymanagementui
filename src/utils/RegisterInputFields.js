@@ -33,7 +33,13 @@ const registerInputFields = [
         type: "password",
         id: "register_user_password",
         pattern: "",
-    }
+    },
+    // {
+    //     name: "isAdmin",
+    //     label: "Is Admin",
+    //     type: "checkbox",
+    //     id: "is_user_admin"
+    // }
 ]
 
 export default registerInputFields

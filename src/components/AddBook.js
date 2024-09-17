@@ -45,7 +45,7 @@ const AddBook = () => {
             console.log("Saved Book Data ", data);
 
         } catch (error) {
-            console.log(error);
+            console.error(error?.error);
         }
     }
 
@@ -55,7 +55,7 @@ const AddBook = () => {
             {bookInputFields.map((inputField) => (<InputField key={inputField.id} {...inputField}
                 onChange={onChange} />))}
 
-            <Button type='submit' button_name={'Add'}
+            <Button type='submit' button_name={'Add Book'}
                 onSubmit={onSubmit} />
         </React.Fragment>
     )

@@ -24,14 +24,11 @@ button:hover {
         :is(input) {
             padding: 9px;
             margin: 2.5% 0%;
+            /* cursor: pointer; */
+            border-radius: 5px;
+            justify-self: flex-start;
         }
 
-    }
-
-    .home {
-        :is(input) {
-            cursor: pointer;
-        }
     }
 }
 
@@ -48,6 +45,16 @@ button:hover {
         :is(input) {
             padding: 9px;
             margin: 2% 0%;
+            /* cursor: pointer; */
+            border-radius: 5px;
+            float: start;
+        }
+
+        :is(.checkmark) {
+            position: absolute;
+            height: 25px;
+            width: 25px;
+            background-color: #808080;
         }
     }
 }
@@ -64,6 +71,8 @@ button:hover {
         :is(input) {
             padding: 9px;
             margin: 2% 0%;
+
+            border-radius: 5px;
         }
     }
 }

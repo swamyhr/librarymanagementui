@@ -4,6 +4,7 @@ import InputField from './InputField'
 import { REGISTER_FORM_TITLE } from '../utils/constants';
 import Button from './Button';
 import { registerUser } from '../services/UserService';
+import "../assets/stylesheets/CheckBox.css"
 
 const Register = () => {
 
@@ -12,7 +13,8 @@ const Register = () => {
         email: "",
         contact: "",
         username: "",
-        password: ""
+        password: "",
+        isAdmin: false
     });
 
     const onChange = (e) => {
@@ -51,6 +53,13 @@ const Register = () => {
         }
     }
 
+    const onCheck = (e) => {
+        setUser({
+            ...user,
+            [e.target.value]: !user.isAdmin
+        })
+    }
+
     return (
         <React.Fragment>
             <h2>{REGISTER_FORM_TITLE}</h2>
@@ -64,6 +73,12 @@ const Register = () => {
                     />
                 })
             }
+
+            <label className='checkBoxContainer'> isAdmin
+                <input name="isAdmin" type='checkbox' onChange={onCheck} cheked={user.isAdmin} />
+                <span className='checkmark'></span>
+            </label>
+
             <Button button_name={'Register'} type="submit" onSubmit={register} />
         </React.Fragment>
     )
